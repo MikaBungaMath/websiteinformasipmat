@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4
+}
+
+header {
+  background-color: #05132e;
+  color: white;
+  padding: 20px 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo-universitas {
+  width: 80px;
+  margin-right: 20px;
+}
+
+.header-title h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-title p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+nav {
+  background-color: #020831;
+  margin-top: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: block;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  background-color: #9e7733;
+  border-radius: 5px;
+}
+
+main {
+  padding: 20px;
+}
+
+.welcome-section {
+  background-color: #e0e0e0;
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.welcome-section h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.welcome-section p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: #92abdd;
+  color: #050505;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 5px #92abdd;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #e0a800;
+  box-shadow: 0 3px #d39e00;
+}
+
+.campus-photo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.campus-photo img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #005f56;
+  color: white;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Dosen</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; color: #333; }
+        .container { width: 80%; margin: 0 auto; }
+        .profile { background-color: #fff; padding: 15px; border: 1px solid #ddd; margin: 10px 0; border-radius: 5px; }
+        h2 { color: #007acc; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Profil Dosen Program Studi Pendidikan Matematika</h1>
+    <div id="profiles"></div>
+</div>
+
+<script>
+    const dosenData = [
+        {
+            nama: "Drs. Sukasno, M.Pd.",
+            nidn: "0006086801",
+            jja: "Lektor",
+            pendidikan: "S3",
+            status: "PNSD",
+            noHP: "085379337897",
+            email: "sukasno@gmail.com"
+        },
+        {
+            nama: "Dr. Anna Fauziah, S.Si, M.Pd",
+            nidn: "0021118001",
+            jja: "Lektor",
+            pendidikan: "S3",
+            status: "PNSD",
+            noHP: "085279764841",
+            email: "annafauziah21@yahoo.com"
+        },
+        {
+            nama: "Drajat Friansyah, S.Si, M.Pd",
+            nidn: "0208028203",
+            jja: "Lektor",
+            pendidikan: "S3(Proses)",
+            status: "DTY",
+            noHP: "085268630303",
+            email: "drajatfriansyah@yahoo.com"
+        },
+        // Tambahkan data dosen lain sesuai kebutuhan...
+    ];
+
+    const profilesContainer = document.getElementById('profiles');
+
+    dosenData.forEach(dosen => {
+        const profileDiv = document.createElement('div');
+        profileDiv.classList.add('profile');
+
+        profileDiv.innerHTML = `
+            <h2>${dosen.nama}</h2>
+            <p><strong>NIDN:</strong> ${dosen.nidn}</p>
+            <p><strong>JJA:</strong> ${dosen.jja}</p>
+            <p><strong>Pendidikan Terakhir:</strong> ${dosen.pendidikan}</p>
+            <p><strong>Status:</strong> ${dosen.status}</p>
+            <p><strong>No HP:</strong> ${dosen.noHP}</p>
+            <p><strong>Email:</strong> ${dosen.email}</p>
+        `;
+
+        profilesContainer.appendChild(profileDiv);
+    });
+</script>
+
+</body>
+</html>
+
+.news-section {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.news-item:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 1rem;
+}
+
+.news-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.news-rating {
+  color: #f39c12;
+}
