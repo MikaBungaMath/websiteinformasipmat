@@ -255,3 +255,18 @@ footer {
 .news-rating {
   color: #f39c12;
 }
+.maps-section, .about-us {
+    margin: 20px 0;
+    text-align: center;
+}
+.about-us ul {
+    list-style: none;
+    padding: 0;
+}
+.about-us ul li {
+    margin: 10px 0;
+}
+.about-us a {
+    color: #007bff;
+    text-decoration: none;
+}
